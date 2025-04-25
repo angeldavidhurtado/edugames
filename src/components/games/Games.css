@@ -1,0 +1,30 @@
+.games {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 12px;
+	margin: auto;
+	padding: 0 20px 40px;
+}
+
+.games a {
+	border-radius: 12px;
+	overflow: hidden;
+	border: 3px solid transparent;
+	transition: all ease .3s;
+}
+.games a:hover {
+	border: 3px solid #c04184;
+	box-shadow: 0 0 30px #c04184;
+}
+
+.games img {
+	width: 100%;
+	pointer-events: none;
+	user-select: none;
+	vertical-align: top;
+	transition: transform .3s ease;
+}
+
+.games a:hover img {
+	transform: rotate(3deg) scale(1.1);
+}

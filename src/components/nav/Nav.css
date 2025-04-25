@@ -1,0 +1,40 @@
+body {
+	padding-top: 100px;
+}
+
+nav {
+	height: 67px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #141066d0;
+	backdrop-filter: blur(27px) brightness(.8);
+	box-shadow: 0 0 30px black;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav img {
+	vertical-align: top;
+}
+
+.logo {
+	margin-top: 7px;
+	margin-left: 6px;
+}
+
+nav select {
+	background: #413c8f;
+	color: #99c1f1;
+	font-size: 18px;
+	font-family: 'poppins', sans-serif;
+	padding: 7px 14px;
+	border-right: 14px solid #413c8f;
+	margin-top: 12px;
+	border-radius: 100px;
+}
