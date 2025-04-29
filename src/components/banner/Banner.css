@@ -1,4 +1,7 @@
 .banner {
+	width: 100%;
+	padding: 30px 0;
+	margin: -30px 0;
 	overflow: hidden;
 }
 
@@ -7,14 +10,28 @@
 
 /* -- -- carousel -- -- */
 
-/*
 .banner .carousel {
 	display: flex;
 	gap: 20px;
+	width: fit-content;
+}
+
+.banner .carousel a {
+	display: block;
+	border-radius: 15px;
+	overflow: hidden;
+	flex-shrink: 0;
+	border: 3px solid transparent;
+}
+.banner .carousel a:hover {
+	border: 3px solid #00ecff;
+	box-shadow: 0 0 30px #00ecff;
 }
 
 .banner .carousel img {
 	vertical-align: top;
-	border-radius: 15px;
+	transition: transform .3s ease;
 }
-*/
+.banner .carousel a:hover img {
+	transform: rotate(3deg) scale(1.1);
+}

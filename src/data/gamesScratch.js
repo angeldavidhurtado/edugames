@@ -15,7 +15,7 @@ img: https://uploads.scratch.mit.edu/get_image/project/{scratchId}_480x360.png
 ></iframe>
 */
 
-const categories = {
+const gamesScratchCategories = {
 	'banner': 'banner',
   '6': '6°',
   '7': '7°',
@@ -69,7 +69,7 @@ const gamesScratch = [
 	// 9
 	{ id: '382947679', name: 'Sesión 4. Sistemas de ecuaciones', categories: ['9.4', 'banner'] },
 	{ id: '409273327', name: 'Sesión 5. Ecuación de la recta', categories: ['9.5'] },
-	{ id: '575958234', name: 'Sesión 7. Función exponencial', categories: ['9.7'] },
+	{ id: '575958234', name: 'Sesión 7. Función exponencial', categories: ['9.7', 'banner'] },
 	/*
 	https://miguelhurtado3e.github.io/matematicas/courses/9/8.html
 	{ id: '', name: 'Sesión 8. Función Logaritmo', categories: ['9.8'] }
@@ -78,7 +78,7 @@ const gamesScratch = [
 	// 10
 	{ id: '323286090', name: 'Sesión 1. Medidas estadísticas', categories: ['10.1', '11.1'] },
 	{ id: '383295156', name: 'Sesión 3. Teorema de Pitágoras', categories: ['10.3'] },
-	{ id: '530643883', name: 'Sesión 4. Razones trigonométricas', categories: ['10.4'] },
+	{ id: '530643883', name: 'Sesión 4. Razones trigonométricas', categories: ['10.4', 'banner'] },
 	/*
 	https://miguelhurtado3e.github.io/matematicas/courses/10/5.html
 	{ id: '', name: 'Sesión 5. Leyes del seno, coseno y tangente', categories: [] }
@@ -108,4 +108,7 @@ const gamesScratch = [
 	*/
 ]
 
-export default gamesScratch
+export {
+	gamesScratch as default,
+	gamesScratchCategories
+}

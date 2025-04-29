@@ -7,8 +7,8 @@ function Home() {
 	return (
 		<>
 			<Nav />
-			<Banner />
 			<Test />
+			<Banner />
 			<Games />
 		</>
 	)
