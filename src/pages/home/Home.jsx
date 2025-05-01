@@ -4,7 +4,10 @@ import Games from '@/components/games/Games'
 import useVisibilityObserver from '@/hooks/useVisibilityObserver'
 
 function Home() {
-	const [isVisible, elementRef] = useVisibilityObserver()
+	const [isVisible, elementRef] = useVisibilityObserver({
+		rootMargin: '-67px 0px 0px',
+		thresold: 0
+	})
 
 	return (
 		<>

@@ -5,9 +5,8 @@ function useVisibilityObserver(options = { thresold: 0 }) {
 	const [isVisible, setVisible] = useState(true)
 
 	useEffect(() => {
-		console.log(elementRef.current)
 		const callback = ([entry]) => {
-			setVisible(entry.inIntersecting)
+			setVisible(entry.isIntersecting)
 		}
 		const observer = new IntersectionObserver(callback, options)
 		if (elementRef.current)
