@@ -7,6 +7,7 @@ function Nav() {
 	const slogan = useRef(null)
 
 	useEffect(() => {
+		/*
 		const handleScroll = () => {
 			const intersectionCallback = entries => {
 				console.log(entries)
@@ -17,11 +18,12 @@ function Nav() {
 				treshold: [.5]
 			}
 			const observer = new IntersectionObserver(intersectionCallback, observerOptions)
-			// observer.observe()
+			observer.observe()
 		}
 		window.addEventListener('scroll', handleScroll)
 
 		return () => window.removeEventListener('scroll', handleScroll)
+		*/
 	}, [])
 
 	return (

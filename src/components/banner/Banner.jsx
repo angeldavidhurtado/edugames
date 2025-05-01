@@ -4,6 +4,7 @@ import gamesScratch, { gamesScratchCategories } from '@/data/gamesScratch'
 import './Banner.css'
 
 function Banner() {
+	const ImgBanner = useRef(null)
 	const Carousel = useRef(null)
 	const carouselPosX = useRef(0)
 	const lastTime = useRef(performance.now())
@@ -16,6 +17,7 @@ function Banner() {
 	gamesBanner = [...gamesBanner, ...gamesBanner]
 
 	useEffect(() => {
+		// animation
 		const gap = parseInt(getComputedStyle(Carousel.current).gap) / 2
 
 		const animate = time => {
@@ -31,7 +33,27 @@ function Banner() {
       rafId.current = requestAnimationFrame(animate)
 		}
 		rafId.current = requestAnimationFrame(animate)
-		return () => cancelAnimationFrame(rafId.current)
+
+
+		// observer
+		const handleScroll = () => {
+			const intersectionCallback = ([entry]) => {
+				console.log(entry.isIntersecting)
+			}
+			const observerOptions = {
+				root: null,
+				rootMargin: '-67px 0px 0px',
+				threshold: 0
+			}
+			const observer = new IntersectionObserver(intersectionCallback, observerOptions)
+			observer.observe(ImgBanner.current)
+		}
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+			cancelAnimationFrame(rafId.current)
+		}
 	}, [])
 
 	const stopAnimation = () => speed.current = 0
@@ -39,7 +61,7 @@ function Banner() {
 
 	return (
 		<div className="banner">
-			<img className="edugames" src="/img/edugames.png" alt="EduGames" />
+			<img ref={ImgBanner} className="edugames" src="/img/edugames.png" alt="EduGames" />
 			<div
 				ref={Carousel}
 				className="carousel"
