@@ -16,9 +16,8 @@ function Nav({ showIco }) {
 						ref={logo}
 						src="/img/edugames-medium.webp"
 						alt="edugames logo medium"
-						className="logo"
+						className={`logo ${showIco && 'hidden'}`}
 						draggable="false"
-						style={{visibility: showIco ? 'hidden' : 'visible' }}
 					/>
 				</li>
 				<li>
@@ -39,6 +38,7 @@ function Nav({ showIco }) {
 						src={sloganMini}
 						alt="edugames slogan mini"
 						draggable="false"
+						className={`${showIco && 'hidden'}`}
 					/>
 				</li>
 			</ul>

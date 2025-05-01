@@ -22,6 +22,11 @@ nav ul {
 
 nav img {
 	vertical-align: top;
+	transition: all linear .15s;
+}
+nav img.hidden {
+	transform: rotate(180deg) scale(0);
+	opacity: 0;
 }
 
 .logo {
