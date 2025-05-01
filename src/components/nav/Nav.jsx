@@ -1,30 +1,12 @@
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import sloganMini from '@/assets/img/slogan-mini.webp'
 import './Nav.css'
 
-function Nav() {
+function Nav({ showIco }) {
 	const logo = useRef(null)
 	const slogan = useRef(null)
 
-	useEffect(() => {
-		/*
-		const handleScroll = () => {
-			const intersectionCallback = entries => {
-				console.log(entries)
-			}
-			const observerOptions = {
-				root: null,
-				margin: '0px',
-				treshold: [.5]
-			}
-			const observer = new IntersectionObserver(intersectionCallback, observerOptions)
-			observer.observe()
-		}
-		window.addEventListener('scroll', handleScroll)
-
-		return () => window.removeEventListener('scroll', handleScroll)
-		*/
-	}, [])
+	console.log()
 
 	return (
 		<nav>
@@ -36,6 +18,7 @@ function Nav() {
 						alt="edugames logo medium"
 						className="logo"
 						draggable="false"
+						style={{visibility: showIco ? 'hidden' : 'visible' }}
 					/>
 				</li>
 				<li>
