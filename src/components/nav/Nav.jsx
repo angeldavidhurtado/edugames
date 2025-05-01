@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import sloganMini from '@/assets/img/slogan-mini.webp'
 import './Nav.css'
 
-function Nav({ showIco }) {
+function Nav({ showIco = true }) {
 	const logo = useRef(null)
 	const slogan = useRef(null)
 
@@ -16,7 +16,7 @@ function Nav({ showIco }) {
 						ref={logo}
 						src="/img/edugames-medium.webp"
 						alt="edugames logo medium"
-						className={`logo ${showIco && 'hidden'}`}
+						className={`logo ${!showIco && 'hidden'}`}
 						draggable="false"
 					/>
 				</li>
@@ -38,7 +38,7 @@ function Nav({ showIco }) {
 						src={sloganMini}
 						alt="edugames slogan mini"
 						draggable="false"
-						className={`${showIco && 'hidden'}`}
+						className={`${!showIco && 'hidden'}`}
 					/>
 				</li>
 			</ul>

@@ -1,0 +1,37 @@
+.game-content {
+	position: relative;
+	padding: 20px;
+}
+
+.game-content .game {
+	display: block;
+	margin: auto;
+	aspect-ratio: 485 / 402;
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	border-radius: 15px;
+}
+
+.game-content .gradient-blue,
+.game-content .gradient-red {
+	width: 30%;
+	height: 27%;
+	border-radius: 50%;
+	filter: blur(90px);
+	opacity: .8;
+	position: absolute;
+	z-index: -1;
+}
+
+.game-content .gradient-blue {
+	background: #00ecff;
+	top: -5%;
+	right: 10%;
+}
+
+.game-content .gradient-red {
+	background: #e100ff;
+	bottom: -5%;
+	left: 10%;
+}

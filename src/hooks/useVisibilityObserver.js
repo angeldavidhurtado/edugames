@@ -6,7 +6,7 @@ function useVisibilityObserver(options = { thresold: 0 }) {
 
 	useEffect(() => {
 		const callback = ([entry]) => {
-			setVisible(entry.isIntersecting)
+			setVisible(!entry.isIntersecting)
 		}
 		const observer = new IntersectionObserver(callback, options)
 		if (elementRef.current)
