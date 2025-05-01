@@ -17,7 +17,7 @@ function Nav() {
 				treshold: [.5]
 			}
 			const observer = new IntersectionObserver(intersectionCallback, observerOptions)
-			observer.observe()
+			// observer.observe()
 		}
 		window.addEventListener('scroll', handleScroll)
 
