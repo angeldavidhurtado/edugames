@@ -1,12 +1,35 @@
+import { useRef, useEffect } from 'react'
 import sloganMini from '@/assets/img/slogan-mini.webp'
 import './Nav.css'
 
 function Nav() {
+	const logo = useRef(null)
+	const slogan = useRef(null)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const intersectionCallback = entries => {
+				console.log(entries)
+			}
+			const observerOptions = {
+				root: null,
+				margin: '0px',
+				treshold: [.5]
+			}
+			const observer = new IntersectionObserver(intersectionCallback, observerOptions)
+			observer.observe()
+		}
+		window.addEventListener('scroll', handleScroll)
+
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
+
 	return (
 		<nav>
 			<ul>
 				<li>
 					<img
+						ref={logo}
 						src="/img/edugames-medium.webp"
 						alt="edugames logo medium"
 						className="logo"
@@ -27,6 +50,7 @@ function Nav() {
 				</li>
 				<li>
 					<img
+						ref={slogan}
 						src={sloganMini}
 						alt="edugames slogan mini"
 						draggable="false"

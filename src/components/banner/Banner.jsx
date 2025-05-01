@@ -9,7 +9,6 @@ function Banner() {
 	const lastTime = useRef(performance.now())
 	const rafId = useRef(null)
 	const speed = useRef(60 / 1000)
-	const [d, setD] = useState(1)
 
 	let gamesBanner = gamesScratch.filter(game =>
 		game.categories.includes(gamesScratchCategories.banner)
@@ -32,16 +31,15 @@ function Banner() {
       rafId.current = requestAnimationFrame(animate)
 		}
 		rafId.current = requestAnimationFrame(animate)
-		console.log('fin efecto')
-		console.log(speed.current)
 		return () => cancelAnimationFrame(rafId.current)
-	}, [d])
+	}, [])
 
-	const stopAnimation = () => { speed.current = 0; setD(d+1) }
+	const stopAnimation = () => speed.current = 0
 	const continueAnimation = () => speed.current = 60 / 1000
 
 	return (
 		<div className="banner">
+			<img className="edugames" src="/img/edugames.png" alt="EduGames" />
 			<div
 				ref={Carousel}
 				className="carousel"

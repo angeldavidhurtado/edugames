@@ -8,6 +8,19 @@
 
 
 
+/* -- -- edugames -- -- */
+
+.banner .edugames {
+	width: 100%;
+	vertical-align: top;
+	margin-bottom: 50px;
+	user-select: none;
+	pointer-events: none;
+}
+
+
+
+
 /* -- -- carousel -- -- */
 
 .banner .carousel {
