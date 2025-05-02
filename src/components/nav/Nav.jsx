@@ -1,12 +1,14 @@
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import sloganMini from '@/assets/img/slogan-mini.webp'
 import './Nav.css'
 
 function Nav({ showIco = true }) {
 	const logo = useRef(null)
 	const slogan = useRef(null)
+	const navigate = useNavigate()
 
-	console.log()
+	const selectGrade = e => navigate(`/search/${e.target.value}`)
 
 	return (
 		<nav>
@@ -22,7 +24,7 @@ function Nav({ showIco = true }) {
 				</li>
 				<li>
 					<form>
-						<select name="grade">
+						<select name="grade" onChange={selectGrade}>
 							<option value="">Curso</option>
 							<option value="7">7°</option>
 							<option value="8">8°</option>

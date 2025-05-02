@@ -6,7 +6,7 @@ import Search from '@/pages/search/Search'
 const routes = [
 	{ index: true, element: <Home /> },
 	{ path:"game/:idGame", element: <PlayGame /> },
-	{ path: "search", element: <Search /> },
+	{ path: "search/:grade", element: <Search /> },
 	{ path: "*", element: <Navigate to="/" replace /> }
 ]
 

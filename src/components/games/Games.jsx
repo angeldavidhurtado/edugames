@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import gamesScratch from '@/data/gamesScratch'
+import allGamesScratch from '@/data/gamesScratch'
 import './Games.css'
 
-function Games() {
+function Games({ gamesScratch = allGamesScratch }) {
 	return (
 		<section className="games">
 			{gamesScratch.map(game =>
