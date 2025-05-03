@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import allGamesScratch from '@/data/gamesScratch'
 import './Games.css'
 
-function Games({ gamesScratch = allGamesScratch }) {
+function Games({ className, gamesScratch = allGamesScratch }) {
 	return (
-		<section className="games">
+		<section className={`games ${className}`}>
 			{gamesScratch.map(game =>
 				<Link to={`/game/${game.id}`} key={game.id}>
 					<img

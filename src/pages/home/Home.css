@@ -1,0 +1,12 @@
+.home .home-nav {
+	z-index: 3;
+}
+
+.home .home-banner {
+	z-index: 1;
+}
+
+.home .home-games {
+	position: relative;
+	z-index: 2;
+}

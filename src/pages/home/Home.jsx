@@ -2,6 +2,7 @@ import Nav from '@/components/nav/Nav'
 import Banner from '@/components/banner/Banner'
 import Games from '@/components/games/Games'
 import useVisibilityObserver from '@/hooks/useVisibilityObserver'
+import './Home.css'
 
 function Home() {
 	const [isVisible, elementRef] = useVisibilityObserver({
@@ -10,11 +11,11 @@ function Home() {
 	})
 
 	return (
-		<>
-			<Nav showIco={isVisible} />
-			<Banner elementRef={elementRef} />
-			<Games />
-		</>
+		<div className="home">
+			<Nav className="home-nav" showIco={isVisible} />
+			<Banner className="home-banner" elementRef={elementRef} />
+			<Games className='home-games' />
+		</div>
 	)
 }
 

@@ -1,10 +1,10 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import gamesScratch, { gamesScratchCategories } from '@/data/gamesScratch'
 
 import './Banner.css'
 
-function Banner({ elementRef }) {
+function Banner({ className, elementRef }) {
 	const Carousel = useRef(null)
 	const carouselPosX = useRef(0)
 	const lastTime = useRef(performance.now())
@@ -40,8 +40,10 @@ function Banner({ elementRef }) {
 	const continueAnimation = () => speed.current = 60 / 1000
 
 	return (
-		<div className="banner">
-			<img ref={elementRef} className="edugames" src="/img/edugames.png" alt="EduGames" />
+		<div className={`banner ${className}`}>
+			<div className="gradient">
+				<img ref={elementRef} className="edugames" src="/img/edugames.png" alt="EduGames" />
+			</div>
 			<div
 				ref={Carousel}
 				className="carousel"

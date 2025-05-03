@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import sloganMini from '@/assets/img/slogan-mini.webp'
 import './Nav.css'
 
-function Nav({ showIco = true }) {
+function Nav({ className, showIco = true }) {
 	const logo = useRef(null)
 	const slogan = useRef(null)
 	const navigate = useNavigate()
@@ -11,7 +11,7 @@ function Nav({ showIco = true }) {
 	const selectGrade = e => navigate(`/search/${e.target.value}`)
 
 	return (
-		<nav>
+		<nav className={className}>
 			<ul>
 				<li>
 					<img

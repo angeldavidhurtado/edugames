@@ -18,6 +18,27 @@
 	pointer-events: none;
 }
 
+@media screen and (min-width: 720px) {
+	.banner {
+		position: relative;
+	}
+
+	.banner .gradient {
+		background: linear-gradient(to right, #35317e 60%, #35317e00);
+		position: absolute;
+		padding: 20px 80px 0 0;
+		top: 10px;
+		bottom: 10px;
+		display: flex;
+		align-items: center;
+		z-index: 1;
+	}
+
+	.banner .edugames {
+		width: 500px;
+	}
+}
+
 
 
 
