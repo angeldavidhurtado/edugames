@@ -32,6 +32,7 @@ nav img.hidden {
 .logo {
 	margin-top: 7px;
 	margin-left: 6px;
+	cursor: pointer;
 }
 
 nav select {

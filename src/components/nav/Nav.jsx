@@ -20,6 +20,7 @@ function Nav({ className, showIco = true }) {
 						alt="edugames logo medium"
 						className={`logo ${!showIco && 'hidden'}`}
 						draggable="false"
+						onClick={() => {navigate('/')}}
 					/>
 				</li>
 				<li>
