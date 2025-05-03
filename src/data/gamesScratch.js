@@ -42,6 +42,7 @@ const gamesScratch = [
 	{ id: '256539458', name: 'Sesión 3. Áreas y Perímetros', categories: ['6.3', '7.3'] },
 	{ id: '377458163', name: 'Sesión 4. Suma y resta de enteros', categories: ['6.4'] },
 	{ id: '388955854', name: 'Sesión 5. Situaciones aditivas', categories: ['6.5'] },
+
 	/*
 	{ id 'https://phet.colorado.edu/sims/html/arithmetic/latest/arithmetic_en.html', name: 'Sesión 6. Situaciones Multiplicativas', categories: ['6.6'] }
 	*/
