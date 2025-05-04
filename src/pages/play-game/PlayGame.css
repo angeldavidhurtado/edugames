@@ -8,9 +8,9 @@
 .game-content .game {
 	display: block;
 	margin: auto;
-	aspect-ratio: 485 / 402;
+	aspect-ratio: 485 / 364;
 	width: 100%;
-	max-width: 550px;
+	max-width: 610px;
 	position: relative;
 	border-radius: 15px;
 }
