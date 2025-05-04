@@ -12,6 +12,7 @@ function Home() {
 
 	return (
 		<div className="home">
+			<iframe src={`/edugames/256539458 - 6.3 7.3 - Sesión 3. Áreas y Perímetros.html`}></iframe>
 			<Nav className="home-nav" showIco={isVisible} />
 			<Banner className="home-banner" elementRef={elementRef} />
 			<Games className='home-games' />
