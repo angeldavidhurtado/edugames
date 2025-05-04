@@ -53,7 +53,7 @@ function Banner({ className, elementRef }) {
 				{gamesBanner.map((game, index) =>
 					<Link to={`/game/${game.id}`} key={index}>
 						<img
-							src={`https://uploads.scratch.mit.edu/get_image/project/${game.id}_350x500.png`}
+							src={`/edugames/cover/${game.id}.png`}
 							alt=""
 						/>
 					</Link>

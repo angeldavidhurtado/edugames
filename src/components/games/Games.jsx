@@ -8,7 +8,7 @@ function Games({ className, gamesScratch = allGamesScratch }) {
 			{gamesScratch.map(game =>
 				<Link to={`/game/${game.id}`} key={game.id}>
 					<img
-						src={`https://uploads.scratch.mit.edu/get_image/project/${game.id}_200x150.png`}
+						src={`/edugames/cover/${game.id}.png`}
 						alt=""
 					/>
 				</Link>

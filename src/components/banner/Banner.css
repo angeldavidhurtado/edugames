@@ -63,6 +63,7 @@
 }
 
 .banner .carousel img {
+	width: 350px;
 	vertical-align: top;
 	transition: transform .3s ease;
 }
