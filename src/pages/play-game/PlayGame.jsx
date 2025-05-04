@@ -5,6 +5,7 @@ import './PlayGame.css'
 
 function PlayGame() {
 	const { idGame } = useParams()
+	// https://scratch.mit.edu/projects/${idGame}/embed
 
 	return (
 		<>
@@ -13,7 +14,7 @@ function PlayGame() {
 				<div className="gradient-blue"></div>
 				<iframe
 					className="game"
-					src={`https://scratch.mit.edu/projects/${idGame}/embed`}
+					src={`/edugames/256539458 - 6.3 7.3 - Sesión 3. Áreas y Perímetros.html`}
 				></iframe>
 				<div className="gradient-red"></div>
 			</div>
