@@ -1,6 +1,7 @@
 import Nav from '@/components/nav/Nav'
 import Banner from '@/components/banner/Banner'
 import Games from '@/components/games/Games'
+import Footer from '@/components/footer/Footer'
 import useVisibilityObserver from '@/hooks/useVisibilityObserver'
 import './Home.css'
 
@@ -15,6 +16,7 @@ function Home() {
 			<Nav className="home-nav" showIco={isVisible} />
 			<Banner className="home-banner" elementRef={elementRef} />
 			<Games className='home-games' />
+			<Footer />
 		</div>
 	)
 }

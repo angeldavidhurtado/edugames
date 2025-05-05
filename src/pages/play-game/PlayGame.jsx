@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import Nav from '@/components/nav/Nav'
 import Games from '@/components/games/Games'
+import Footer from '@/components/footer/Footer'
 import './PlayGame.css'
 
 function PlayGame() {
@@ -15,6 +16,7 @@ function PlayGame() {
 				<div className="gradient-red"></div>
 			</div>
 			<Games />
+			<Footer />
 		</>
 	)
 }
