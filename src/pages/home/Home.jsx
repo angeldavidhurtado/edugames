@@ -14,6 +14,7 @@ function Home() {
 	return (
 		<div className="home">
 			<Nav className="home-nav" showIco={isVisible} />
+			<h1 style={{display: 'none'}}>EduGames</h1>
 			<Banner className="home-banner" elementRef={elementRef} />
 			<Games className='home-games' />
 			<Footer />
